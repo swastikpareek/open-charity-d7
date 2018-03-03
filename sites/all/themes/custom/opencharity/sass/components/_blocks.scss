@@ -1,0 +1,30 @@
+/**
+ @file : css responsible for generic blocks
+ * 
+ **/
+
+.block {
+  &--views {
+    .block__title {
+      margin: 5px 0 ; 
+      text-transform: uppercase;
+      text-align: center;
+      line-height: 1.692;
+      font-size: 18px;
+      color: $light-black;
+
+      @include breakpoint($up-sm) {
+        font-size: 26px;
+        margin: 10px 0 ;
+      }
+    }
+  }
+
+  &--menu {
+    .content {
+      .menu {
+        @include rest-menus();
+      }
+    }
+  }
+}

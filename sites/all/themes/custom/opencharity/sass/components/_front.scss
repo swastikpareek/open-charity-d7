@@ -1,0 +1,22 @@
+/**
+ @file : css responsible for front css
+ * 
+ **/
+ 
+.front {
+  .ct {
+    &__main-content {
+      background-color: $light-grey;
+    }
+  }
+  .ft {
+    padding-top: 150px; 
+    background-color: $light-grey;
+
+    &__pre-footer {
+      .region--pre_footer {
+        margin-top: -150px;
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+/** 
+ * CSS color vars
+ */
+
+$white: #fff;
+$black: #000;
+
+$milky-white: #f2f2f2;
+$light-grey: #f1f2f5;
+$light-black: #575656;
+
+$dark-grey: #5b6172;
+
+$content-block-divider: #d9dadd;
+
+$prefooter-black: #5d5e61;
+$footer-black: #454850;
+$footer-text: #979eb1;
+$footer-border: #585b61;
+
+$bullet-grey: #989eac;
+
+$blue: #5fc0c3;
+
+$register-bg: $blue;
+$register-border: #21bec0;
+
+$light-blue: #5dc0c9;
+$acqua-blue: #61c0bd;
+$acqua-blue-border: #26bdb9;
+
+$text-light-shadow: rgba(0, 0, 0, 0.15);
+
+/** 
+ * Breakpoint vars
+ */
+
+$screen : "only screen" !default;
+$tablet-min: 768px;
+$mobile-max:  $tablet-min - 1;
+
+$gutter-width: 30px;
+
+$down-mob: #{$screen} max-width $mobile-max; 
+$up-sm: #{$screen} $tablet-min;
+

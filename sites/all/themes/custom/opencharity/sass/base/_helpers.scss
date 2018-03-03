@@ -1,0 +1,164 @@
+/**
+ @file : helper css classes here.
+ * 
+ **/
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;  
+}
+
+.link {
+  &--spl {
+    color: $acqua-blue;
+    border: 1px solid $acqua-blue;
+    background-color: $white;
+    padding: 8.5px 15px;
+    margin-right: 0;
+    font-size: 14px;
+    line-height: 1.5; 
+
+    &:focus,
+    &:hover {
+      color: $white;
+      border: 1px solid $acqua-blue;
+      background-color: $acqua-blue;
+    }
+  }
+}
+
+.ico{
+  @extend %icomoon;
+  @extend %hide-text;
+
+  &:before {
+    font-size: 18px !important;
+  }
+
+  &--facebook {
+    &:before {
+      @extend %icon-facebook;
+    }
+  }
+
+  &--google-plus {
+    &:before {
+      @extend %icon-google-plus;
+
+      font-size: 20px !important;
+    }
+  }
+
+  &--twitter {
+    &:before {
+      @extend %icon-twitter;
+    }
+  }    
+}
+
+.para {
+  @extend %font-os-reg;
+
+  line-height: 2;
+  margin: 10px 0;
+
+  @include breakpoint($up-sm) {
+    margin: 20px 0;  
+  }  
+
+  &--m {
+    font-size: 15px;
+    @include breakpoint($up-sm) {
+      font-size: 17px;
+    }
+  }
+
+}
+
+.slick{
+  &-slider {
+    padding: 0 40px;
+
+    @include breakpoint($up-sm) {
+      padding: 0;
+    }
+  }
+  &-arrow {
+    &.slick-next,
+    &.slick-prev {
+      @include transition(transform); 
+
+      width: 20px;
+      height: 20px;
+      background-color: transparent;
+      border-top: 5px solid $blue;
+      border-right: 5px solid $blue;
+
+      &:before {
+        content: none;
+      }     
+    }
+
+    &.slick-prev {
+      left: 10px;
+      transform: rotateZ(-135deg);
+
+      @include breakpoint($up-sm) {
+        left: -20px;
+      } 
+
+      &:hover,
+      &:focus {
+        transform: rotateZ(-135deg) scale(1.2);
+      }
+    }   
+
+    &.slick-next {
+      right: 10px;
+      transform: rotateZ(45deg);
+
+      @include breakpoint($up-sm) {
+        right: -20px;
+      }        
+
+      &:hover,
+      &:focus {
+        transform: rotateZ(45deg) scale(1.2);
+      }
+    }        
+  }
+  &-dots{
+    left: 0;
+
+    li {
+      padding: 5px;
+      margin: 0;
+
+      &.slick-active,
+      &:focus,
+      &:hover {
+        button {
+          background-color: $blue;        
+        }
+      }    
+      button {
+        width: 10px;
+        height: 10px;
+        background-color: $bullet-grey;
+        border-radius: 100%;
+
+        @include transition(background-color);
+
+        &:before {
+          content: none;
+        }
+      }
+    }
+  }
+}

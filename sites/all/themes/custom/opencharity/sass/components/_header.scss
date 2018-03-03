@@ -1,0 +1,241 @@
+/**
+ @file : css responsible for header
+ * 
+ **/
+
+.hd{ 
+  .menu{
+    @include rest-menus();
+
+    & > li {
+      padding-right: 11px;
+      
+      @include breakpoint($up-sm) {
+        padding-right: 0;
+      }        
+      & > a {
+        padding: 8.5px 0;
+        font-size: 14px;
+        line-height: 1.5;
+        box-sizing: border-box;
+        text-align: right;
+
+        @include breakpoint($up-sm) {
+          text-align: left;
+        }
+
+        color: $light-black;
+
+        &.active,
+        &:focus,
+        &:hover {
+          text-decoration: none;
+          color: $acqua-blue;
+          background-color: transparent;
+        }
+
+        @include breakpoint($up-sm) {
+          margin-right: 35px;
+        }
+
+        &.link--spl {
+          @extend .link--spl;
+
+          @include breakpoint($down-mob) {
+            padding: 8.5px 0;
+            border: 0;
+            &:hover,
+            &:focus {
+              border: 0;
+              background-color: $white;
+              color: $blue;
+            }
+          }
+        }
+      }
+    } 
+  }
+
+  .logo {
+    max-width:  150px;
+    float: left;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    &__link {
+      display: block;
+      margin-top: 8px;
+      margin-bottom: 8px;
+      line-height: 0;
+    }
+  }
+
+  &__navigation {
+    @extend %font-ms-500;
+
+    .grid-cont {
+      padding: 15px;
+
+      @include breakpoint($up-sm) {
+        display: flex;
+        align-items: center;
+        padding: 20px 15px;        
+      }
+      .menu-bar__button {
+        margin: 2.5px 0;
+      }
+      .menu-bar__button__bar {
+        background-color: $blue;
+      }
+    }
+    &-right {
+      flex-grow: 1;
+
+      h2 {
+        @extend .visually-hidden;
+      }
+
+      &-nav {
+        @include breakpoint($up-sm) {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;          
+        }
+
+        a {
+          text-transform: uppercase;
+        }      
+      }
+      .join-us {
+        padding-left: 25px;
+        padding-right: 25px;
+        margin-right: 0;
+      }   
+    }
+  }
+
+  &__header {
+    background:$black image-url('hero.jpg') center top no-repeat;
+    background-size: auto 100%;
+
+    @include breakpoint($up-sm) {
+      background-size: 100% auto;
+    }
+    .block {
+      text-align: center;
+      padding: 30px 0;
+
+      @include breakpoint($up-sm) {
+        padding: 60px 0;
+      }
+
+      &__title {
+        font-size: 28px;
+        margin: 0;
+        @extend %font-ms-300;
+        text-transform: uppercase;
+        color: $white;
+        line-height: 1.364;
+        text-shadow: 0px 5px 20px $text-light-shadow;
+        @include breakpoint($up-sm) {
+         font-size: 55px;
+        }
+      }
+      .para {
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        color: $white;
+        text-shadow: 0px 5px 20px $text-light-shadow;
+      }
+    }
+  }
+  
+  &__highlighted {
+    background-color: $light-grey;  
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    @include breakpoint($up-sm) {
+      padding-top: 30px;
+      padding-bottom: 30px;      
+    }
+
+    > .grid-cont {
+      @include breakpoint($up-sm) {
+        display: flex;
+        align-items: center;
+      }
+
+      > .region {
+        @include breakpoint($up-sm) {
+          flex-grow: 1;
+        }
+      }
+    }
+
+    .next-event {
+      font-size: 14px;
+      text-align: center;
+
+      @include breakpoint($up-sm) {
+        font-size: 17px;
+        text-align: left;
+      }
+
+      &__date {
+        @extend %font-ms-500;
+
+        margin-bottom: 5px;
+
+        &-label {
+          color: $acqua-blue;
+        }
+
+        &-time {
+          @extend %font-os-sb;
+        }
+      }
+
+      &__description {
+        color: $dark-grey;
+        font-size: 12px;
+
+        @include breakpoint($up-sm) {
+          font-size: 14px;
+        }        
+      }
+    }
+
+    .register{
+      &__link {
+        margin: 20px 0 0 0;
+        text-align: center;
+
+        @include breakpoint($up-sm) {
+          margin: 0;
+          text-align: left;
+        }
+        a {
+          display: inline-block;
+          padding: 8px 25px;
+          text-transform: uppercase;
+          line-height: 1.5;
+          color: $white;
+          background-color: $register-bg;
+          border:1px solid $register-border;
+
+          &:focus,
+          &:hover {
+            background-color: transparent;
+            border-color: $register-border;
+            color: $register-bg;
+          }
+        }
+      }
+    }
+  }  
+}

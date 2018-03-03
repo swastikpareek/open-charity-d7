@@ -1,0 +1,64 @@
+/**
+ @file : css responsible for footer css
+ * 
+ **/
+
+.ft{
+  &__pre-footer {
+    background-color: $prefooter-black;
+    
+    .grid-cont--fluid {
+      max-width: 1280px;
+    }    
+
+    .region--pre_footer {
+      margin: 0 -15px;
+      background: $white;
+    }
+
+    .block {
+      @include block-styles();      
+    }
+  }
+
+  &__footer {
+    background-color: $footer-black;
+    color: $footer-text;
+    text-align: center;
+    .block {
+      padding: 25px 0;
+      border-bottom: 1px solid $footer-border;
+
+      &:last-child {
+        border: 0;
+      }
+    }
+    .content {
+      a {
+        color: $light-blue;
+
+        &:hover,
+        &:focus {
+          color: $white;
+        }
+      } 
+    }
+    p {
+      color: inherit;
+    }
+  }
+
+  #block-menu-menu-footer-social-icon-menus {
+    .content{
+      .menu {
+        margin: 0;
+        display: flex;
+        justify-content: center;        
+        .ico {
+          padding: 2px;
+          margin-right: 20px;      
+        }
+      }
+    }
+  }
+}

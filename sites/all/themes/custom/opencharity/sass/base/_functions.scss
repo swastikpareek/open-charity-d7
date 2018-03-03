@@ -1,0 +1,12 @@
+/**
+ * @file: function definitions used site wide.
+ */
+
+
+@function image-url($url){
+  @return #{'url(../images/' + $url + ')'};
+}
+
+@function font-url($url){
+  @return #{'url(../fonts/' + $url + ')'};
+}

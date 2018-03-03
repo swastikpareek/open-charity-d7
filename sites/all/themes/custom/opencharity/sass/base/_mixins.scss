@@ -1,0 +1,39 @@
+/**
+ @file : mixins used site wide.
+ * 
+ **/
+
+@mixin block-styles() {
+  padding: 20px 0;
+  border-bottom: 1px solid $content-block-divider;
+
+  &:last-child {
+    border: 0;
+  }  
+}
+
+@mixin transition($prop) {
+  transition: #{$prop} 0.2s cubic-bezier(0,0,0,0.4);
+}
+
+@mixin rest-menus() {
+  padding-left: 0;
+  bottom: 0;
+  margin: 0;
+  list-style: none;  
+  > li {
+    position: relative;
+    display: block;  
+    margin: 0;
+    padding: 0;  
+
+    @include breakpoint($up-sm) {
+      float: left;
+    }
+    > a {
+      position: relative;
+      display: block;
+      padding: 10px 15px;      
+    }    
+  }
+}

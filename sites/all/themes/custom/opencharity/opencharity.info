@@ -1,0 +1,30 @@
+name = Open Charity
+description = Simple theme for Open charity Drupal theme.
+core = 7.x
+
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Regions
+;;;;;;;;;;;;;;;;;;;;;
+
+regions[nav]            = 'Navigation'
+regions[header]         = 'Top Bar'
+regions[highlighted]    = 'Highlighted'
+regions[help]           = 'Help'
+regions[pre_content]    = 'Pre content'
+regions[content]        = 'Content'
+regions[pre_footer]     = 'Pre footer'
+regions[footer]         = 'Footer'
+regions[page_top]       = 'Page top'
+regions[page_bottom]    = 'Page bottom'
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Theme Assets
+;;;;;;;;;;;;;;;;;;;;;
+
+stylesheets[all][] = node_modules/normalize.css/normalize.css
+stylesheets[all][] = css/main.css
+
+scripts[] = js/script.js

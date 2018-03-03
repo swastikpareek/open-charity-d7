@@ -1,0 +1,53 @@
+/** 
+ * @file: Fonts partials and other important partials
+ */
+
+%font-ms-300 {
+  font-family: 'MS-300', Helvetica, Arial, sans-serif;
+}
+
+%font-ms-500 {
+  font-family: 'MS-500', Helvetica, Arial, sans-serif;
+}
+
+%font-ms-700 {
+  font-family: 'MS-700', Helvetica, Arial, sans-serif;
+}
+
+%font-os-reg {
+  font-family: 'OS-Reg', Helvetica, Arial, sans-serif;
+}
+
+%font-os-sb {
+  font-family: 'OS-SB', Helvetica, Arial, sans-serif;
+}
+
+%icomoon {
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;  
+}
+
+%hide-text {
+  font-size: 0 !important;
+}
+
+%icon-google-plus {
+  content: "\ea8b";
+}
+%icon-facebook {
+  content: "\ea90";
+}
+
+%icon-twitter {
+  content: "\ea96";
+}
+

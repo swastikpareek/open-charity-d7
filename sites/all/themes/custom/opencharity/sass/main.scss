@@ -1,0 +1,27 @@
+/**
+ * @file : Responsible for main styles used site wide
+ */
+
+// Breakpoint node sass package for creating generic breakpoints
+@import "breakpoint";
+
+// Base definitions
+// variables import
+@import "base/vars";
+//functions import.
+@import "base/functions";
+// Fonts decleartions import.
+@import "base/fonts";
+// Base mixins import
+@import "base/mixins";
+// Base placeholders placeholders
+@import "base/placeholders";
+
+// importing helper css
+@import "base/helpers";
+// importing basic styles
+@import "base/basics";
+
+// importing all the components using wild card.
+
+@import "components/**";

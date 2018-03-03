@@ -1,0 +1,10 @@
+/** 
+ * @file: Styles for content regions.
+ */
+.ct {
+  flex-grow: 1;
+
+  .block {
+    @include block-styles();
+  }
+}

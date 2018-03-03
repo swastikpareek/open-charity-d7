@@ -1,0 +1,135 @@
+/**
+ * @file: css for our missions block on home page
+ */
+
+.our-missions {
+  .view__header {
+    text-align: center;
+    p,h4{
+      color: $dark-grey;
+    }
+  }
+
+
+  &__title {
+    color: $light-blue;
+  }  
+
+  &__description {
+    margin: 5px 0;
+
+    @include breakpoint($up-sm) {
+      margin: 10px 0;
+    }    
+  }  
+
+  .view__content {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    margin: 0 (-$gutter-width/2);
+    
+    @include breakpoint($up-sm) {
+      flex-direction: row;
+      justify-content: space-between;
+
+      padding: 20px 0;
+    }
+  }
+
+  &-list {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 0 $gutter-width/2; 
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0; 
+    }
+
+    @include breakpoint($up-sm) {
+      flex-basis: 33.3333%;
+      margin-bottom: 0;
+    }  
+    &:before,
+    &:after {
+      display: block;
+      width: 100px;
+      height: 100px;
+      border-radius: 100%;   
+      overflow: hidden;
+      box-shadow: none;   
+    }
+
+    //after tag added for clean box shadow.
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 0;
+
+      @include transition(all);
+    }  
+    &::before {
+      position: relative;
+      z-index: 2;
+
+      background-color: $white;
+      border: 10px solid $white;
+      content: '';
+      margin: 0 auto -50px auto;
+    }
+    &__inner {
+      z-index: 1;
+      padding: 50px 15px 15px 10px;
+      text-align: center;
+      background-color: $white;
+      border-radius: 5px;
+
+      @include transition(all);
+
+      @include breakpoint($up-sm) {
+        padding: 50px 20px 30px 20px;
+        flex-grow: 1;
+      }     
+    }
+
+    &.encourage {
+      &:before {
+        background-image: image-url('encourage-alt.png');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+      }
+    }
+
+    &.bring-together {
+      &:before {
+        background-image: image-url('together-alt.png');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+      }      
+    }
+
+    &.help-charities {
+      &:before {
+        background-image: image-url('help-alt.png');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+      }      
+    }
+
+    &:hover,
+    &:focus {
+      &:after,
+      .our-missions-list__inner{
+        box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+/** 
+ * @file: containing font decleartions.
+ */
+
+@font-face {
+  font-family: 'MS-300';
+  src: font-url('MuseoSans_300.woff2') format('woff2'), 
+       font-url('MuseoSans_300.woff') format('woff')
+  }
+
+@font-face {
+  font-family: 'MS-500';
+  src: font-url('MuseoSans_500.woff2') format('woff2'), 
+       font-url('MuseoSans_500.woff') format('woff')
+  }
+
+@font-face {
+  font-family: 'MS-700';
+  src: font-url('MuseoSans_700.woff2') format('woff2'), 
+       font-url('MuseoSans_700.woff') format('woff')
+  }    
+
+@font-face {
+  font-family: 'OS-Reg';
+  src: font-url('OpenSans_Regular.woff2') format('woff2'), 
+       font-url('OpenSans_Regular.woff') format('woff')
+  }      
+
+@font-face {
+  font-family: 'OS-SB';
+  src: font-url('OpenSans_SemiBold.woff2') format('woff2'), 
+       font-url('OpenSans_SemiBold.woff') format('woff')
+  }   
+
+@font-face {
+  font-family: 'icomoon';
+  src:  font-url('icomoon.eot?famr0a');
+  src:  font-url('icomoon.eot?famr0a#iefix') format('embedded-opentype'),
+    font-url('icomoon.ttf?famr0a') format('truetype'),
+    font-url('icomoon.woff?famr0a') format('woff'),
+    font-url('icomoon.svg?famr0a#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

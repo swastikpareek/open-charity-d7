@@ -1,0 +1,56 @@
+/**
+ @file : Basic styling css
+ * 
+ **/
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: $light-black;
+
+  @extend %font-os-reg;
+}
+
+h1,h2,h3,h4,h5,h6,
+.h1,.h2,.h3,.h4,.h5,.h6 {
+  @extend %font-ms-500;
+}
+
+h4,
+.h4 {
+  font-size: 15px;
+
+  @include breakpoint($up-sm) {
+    font-size: 17px;
+  }
+}
+
+p {
+  @extend %font-os-reg;
+  
+  font-size: 12px;
+  line-height: 1.9;
+  color: $light-black;
+  
+  @include breakpoint($up-sm) {
+    font-size: 14px;  
+  }
+}
+
+a {
+  color: $light-black;
+  text-decoration: none;
+  @include transition(all);
+  
+  &:focus,
+  &:hover {
+    text-decoration: none;
+    color: $acqua-blue;
+    background-color: transparent;
+  }
+}
