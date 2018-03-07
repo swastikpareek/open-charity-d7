@@ -39,8 +39,17 @@ $screen : "only screen" !default;
 $tablet-min: 768px;
 $mobile-max:  $tablet-min - 1;
 
+$landscape-tab-min: 992px;
+
+$small-desktop: 1200px;
+
+$tablet-min: 768px;
+
 $gutter-width: 30px;
 
 $down-mob: #{$screen} max-width $mobile-max; 
 $up-sm: #{$screen} $tablet-min;
+$up-md: #{$screen} $landscape-tab-min;
+$up-lg: #{$screen} $small-desktop;
+
 

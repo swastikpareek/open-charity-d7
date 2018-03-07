@@ -30,13 +30,13 @@
 
   @extend .clearfix;
 
-  @media screen and (min-width: 768px) {
+  @include breakpoint($up-sm) {
     width: 750px;
   }
-  @media screen and (min-width: 992px) {
+  @include breakpoint($up-md) {
     width: 970px;
   }
-  @media screen and (min-width: 1200px) {
+  @include breakpoint($up-lg) { 
     width: 1170px;
   }    
 
@@ -54,8 +54,6 @@
 
   }
 }
-
-
 
 .menu-bar--collapsible {
   width: auto;
@@ -81,7 +79,7 @@
     border: 1px solid transparent;
     border-radius: 4px;
 
-    @media screen and (min-width:768px) {
+    @include breakpoint($up-sm) {
       display: none;
     }
   &:focus {
